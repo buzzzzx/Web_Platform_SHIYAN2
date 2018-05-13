@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>温度数据 | 燃气监测系统</title>
+    <meta name="description" content="这是一个 index 页面">
+    <meta name="keywords" content="index">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <link rel="icon" type="image/png" href="../display/static/i/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="../display/static/i/app-icon72x72@2x.png">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+    <script src="../display/static/js/echarts.min.js"></script>
+    <link rel="stylesheet" href="../display/static/css/amazeui.min.css"/>
+    <link rel="stylesheet" href="../display/static/css/amazeui.datatables.min.css"/>
+    <link rel="stylesheet" href="../display/static/css/app.css">
+    <script src="../display/static/js/jquery.min.js"></script>
+
+</head>
+
+<body data-type="temperature">
+<script src="../display/static/js/theme.js"></script>
+<div class="am-g tpl-g">
+    <!-- 头部 -->
+    <header>
+        <!-- logo -->
+        <div class="am-fl tpl-header-logo">
+            <a href="javascript:;">燃气监测系统</a>
+        </div>
+        <!-- 右侧内容 -->
+        <div class="tpl-header-fluid">
+            <!-- 侧边切换 -->
+            <div class="am-fl tpl-header-switch-button am-icon-list">
+                    <span>
+
+                </span>
+            </div>
+            <!-- 搜索 -->
+            <div class="am-fl tpl-header-search">
+                <form class="tpl-header-search-form" action="javascript:;">
+                    <button class="tpl-header-search-btn am-icon-search"></button>
+                    <input class="tpl-header-search-box" type="text" placeholder="搜索内容...">
+                </form>
+            </div>
+            <!-- 其它功能-->
+            <div class="am-fr tpl-header-navbar">
+                <ul>
+                    <!-- 欢迎语 -->
+                    <li class="am-text-sm tpl-header-navbar-welcome">
+                        <a href="javascript:;">欢迎你, <span>Admin1</span> </a>
+                    </li>
+
+
+                    <!-- 退出 -->
+                    <li class="am-text-sm">
+                        <a href="javascript:;">
+                            <span class="am-icon-sign-out"></span> 退出
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </header>
+    <!-- 风格切换 -->
+    <div class="tpl-skiner">
+        <div class="tpl-skiner-toggle am-icon-cog">
+        </div>
+        <div class="tpl-skiner-content">
+            <div class="tpl-skiner-content-title">
+                选择主题
+            </div>
+            <div class="tpl-skiner-content-bar">
+                <span class="skiner-color skiner-white" data-color="theme-white"></span>
+                <span class="skiner-color skiner-black" data-color="theme-black"></span>
+            </div>
+        </div>
+    </div>
+    <!-- 侧边导航栏 -->
+    <div class="left-sidebar">
+        <!-- 用户信息 -->
+        <div class="tpl-sidebar-user-panel">
+            <div class="tpl-user-panel-slide-toggleable">
+                <div class="tpl-user-panel-profile-picture">
+                    <img src="../display/static/img/tt.jpg" alt="">
+                </div>
+                <span class="user-panel-logged-in-text">
+              <i class="am-icon-circle-o am-text-success tpl-user-panel-status-icon"></i>
+              Admin1
+          </span>
+                <a href="javascript:;" class="tpl-user-panel-action-link"> <span class="am-icon-pencil"></span> 账号设置</a>
+            </div>
+        </div>
+
+        <!-- 菜单 -->
+        <ul class="sidebar-nav">
+            <li class="sidebar-nav-heading">MENU <span class="sidebar-nav-heading-info"> </span></li>
+            <li class="sidebar-nav-link">
+                <a href="{% url 'display:index' %}">
+                    <i class="am-icon-home sidebar-nav-link-logo"></i> 首页
+                </a>
+            </li>
+            <li class="sidebar-nav-link">
+                <a href="javascript:;" class="sidebar-nav-sub-title active">
+                    <i class="am-icon-bar-chart sidebar-nav-link-logo"></i> 各项数据展示
+                    <span class="am-icon-chevron-down am-fr am-margin-right-sm sidebar-nav-sub-ico"></span>
+                </a>
+                <ul class="sidebar-nav sidebar-nav-sub">
+                    <li class="sidebar-nav-link">
+                        <a href="{% url 'display:charts_gas' %}">
+                            <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 燃气
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-link">
+                        <a href="{% url 'display:charts_temp' %}" class="active">
+                            <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 温度
+                        </a>
+                    </li>
+
+                    <li class="sidebar-nav-link">
+                        <a href="{% url 'display:charts_pres' %}">
+                            <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 压力
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sidebar-nav-link">
+                <a href="{% url 'display:alarm' %}">
+                    <i class="am-icon-table sidebar-nav-link-logo"></i> 预警监测
+                </a>
+            </li>
+            <li class="sidebar-nav-link">
+                <a href="{% url 'display:calendar_logs' %}">
+                    <i class="am-icon-calendar sidebar-nav-link-logo"></i> 日志
+                </a>
+            </li>
+            {#                <li class="sidebar-nav-link">#}
+            {#                    <a href="form.html">#}
+            {#                        <i class="am-icon-wpforms sidebar-nav-link-logo"></i> 表单#}
+            {##}
+            {#                    </a>#}
+            {#                </li>#}
+
+
+            {#                <li class="sidebar-nav-heading">Page<span class="sidebar-nav-heading-info"> 常用页面</span></li>#}
+
+            {#                <li class="sidebar-nav-link">#}
+            {#                    <a href="sign-up.html">#}
+            {#                        <i class="am-icon-clone sidebar-nav-link-logo"></i> 注册#}
+            {#                        <span class="am-badge am-badge-secondary sidebar-nav-link-logo-ico am-round am-fr am-margin-right-sm">6</span>#}
+            {#                    </a>#}
+            {#                </li>#}
+            {#                <li class="sidebar-nav-link">#}
+            {#                    <a href="login.html">#}
+            {#                        <i class="am-icon-key sidebar-nav-link-logo"></i> 登录#}
+            {#                    </a>#}
+            {#                </li>#}
+            {#                <li class="sidebar-nav-link">#}
+            {#                    <a href="404.html">#}
+            {#                        <i class="am-icon-tv sidebar-nav-link-logo"></i> 404错误#}
+            {#                    </a>#}
+            {#                </li>#}
+
+        </ul>
+    </div>
+
+    <!-- 内容区域 -->
+    <div class="tpl-content-wrapper">
+
+        <div class="container-fluid am-cf">
+            <div class="row">
+                <div class="am-u-sm-12 am-u-md-12 am-u-lg-9">
+                    <div class="page-header-heading"><span class="am-icon-bar-chart"></span> 温度
+                        <small></small>
+                    </div>
+                    <p class="page-header-description">管道温度数据</p>
+                </div>
+                <div class="am-u-lg-3 tpl-index-settings-button">
+                    <button type="button" class="page-header-button"><span class="am-icon-paint-brush"></span> 设置
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row-content am-cf">
+            <div class="widget am-cf">
+                <div class="widget-head am-cf">
+                    <div class="widget-title am-fl">温度数据统计</div>
+                    <div class="widget-function am-fr">
+                        <a href="javascript:;" class="am-icon-cog"></a>
+                    </div>
+                </div>
+                <div class="widget-body am-fr">
+                    <div style="height: 400px" class="" id="test-temp">
+
+                    </div>
+                    <script type="text/javascript">
+                        // 基于准备好的dom，初始化echarts实例
+                        var myChart = echarts.init(document.getElementById('test-temp'));
+
+                        // 指定图表的配置项和数据
+                        var option = {
+                            xAxis: {
+                                type: 'category',
+                                boundaryGap: false,
+                                data: ['12:00', '12:01', '12:02', '12:03', '12:04', '12:05', '12:06', '12:07', '12:08', '12:09']
+                            },
+                            yAxis: {
+                                type: 'value',
+                                axisLabel: {
+                                    formatter: '{value} 摄氏度'
+                                },
+                            },
+                            series: [{
+                                data: [15.44, 13.90, 14.09, 15.88, 16.32, 15.23, 14.78, 12.20, 14.33, 14.67],
+                                type: 'line',
+                                areaStyle: {}
+                            }]
+                        };
+
+
+                        // 使用刚指定的配置项和数据显示图表。
+                        myChart.setOption(option);
+                    </script>
+                </div>
+            </div>
+
+
+            <div class="row">
+
+                <div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
+                    <div class="widget am-cf">
+                        <div class="widget-head am-cf">
+                            <div class="widget-title am-fl">温度数据表格</div>
+                            <div class="widget-function am-fr">
+                                <a href="javascript:;" class="am-icon-cog"></a>
+                            </div>
+                        </div>
+                        <div class="widget-body  widget-body-lg am-fr">
+
+                            <table width="100%" class="am-table am-table-compact am-table-striped tpl-table-black "
+                                   id="example-r">
+                                <thead>
+                                <tr>
+                                    <th>文章标题</th>
+                                    <th>作者</th>
+                                    <th>时间</th>
+                                    <th>操作</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr class="gradeX">
+                                    <td>Amaze UI 模式窗口</td>
+                                    <td>张鹏飞</td>
+                                    <td>2016-09-26</td>
+                                    <td>
+                                        <div class="tpl-table-black-operation">
+                                            <a href="javascript:;">
+                                                <i class="am-icon-pencil"></i> 编辑
+                                            </a>
+                                            <a href="javascript:;" class="tpl-table-black-operation-del">
+                                                <i class="am-icon-trash"></i> 删除
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="even gradeC">
+                                    <td>有适配微信小程序的计划吗</td>
+                                    <td>天纵之人</td>
+                                    <td>2016-09-26</td>
+                                    <td>
+                                        <div class="tpl-table-black-operation">
+                                            <a href="javascript:;">
+                                                <i class="am-icon-pencil"></i> 编辑
+                                            </a>
+                                            <a href="javascript:;" class="tpl-table-black-operation-del">
+                                                <i class="am-icon-trash"></i> 删除
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="gradeX">
+                                    <td>请问有没有amazeui 分享插件</td>
+                                    <td>王宽师</td>
+                                    <td>2016-09-26</td>
+                                    <td>
+                                        <div class="tpl-table-black-operation">
+                                            <a href="javascript:;">
+                                                <i class="am-icon-pencil"></i> 编辑
+                                            </a>
+                                            <a href="javascript:;" class="tpl-table-black-operation-del">
+                                                <i class="am-icon-trash"></i> 删除
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="even gradeC">
+                                    <td>关于input输入框的问题</td>
+                                    <td>着迷</td>
+                                    <td>2016-09-26</td>
+                                    <td>
+                                        <div class="tpl-table-black-operation">
+                                            <a href="javascript:;">
+                                                <i class="am-icon-pencil"></i> 编辑
+                                            </a>
+                                            <a href="javascript:;" class="tpl-table-black-operation-del">
+                                                <i class="am-icon-trash"></i> 删除
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="even gradeC">
+                                    <td>有没有发现官网上的下载包不好用</td>
+                                    <td>醉里挑灯看键</td>
+                                    <td>2016-09-26</td>
+                                    <td>
+                                        <div class="tpl-table-black-operation">
+                                            <a href="javascript:;">
+                                                <i class="am-icon-pencil"></i> 编辑
+                                            </a>
+                                            <a href="javascript:;" class="tpl-table-black-operation-del">
+                                                <i class="am-icon-trash"></i> 删除
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr class="even gradeC">
+                                    <td>我建议WEB版本文件引入问题</td>
+                                    <td>罢了</td>
+                                    <td>2016-09-26</td>
+                                    <td>
+                                        <div class="tpl-table-black-operation">
+                                            <a href="javascript:;">
+                                                <i class="am-icon-pencil"></i> 编辑
+                                            </a>
+                                            <a href="javascript:;" class="tpl-table-black-operation-del">
+                                                <i class="am-icon-trash"></i> 删除
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!-- more data -->
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+</div>
+</div>
+<script src="../display/static/js/amazeui.min.js"></script>
+<script src="../display/static/js/amazeui.datatables.min.js"></script>
+<script src="../display/static/js/dataTables.responsive.min.js"></script>
+<script src="../display/static/js/app.js"></script>
+
+</body>
+
+</html>

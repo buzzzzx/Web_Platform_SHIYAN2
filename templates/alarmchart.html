@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>预警监测 | 燃气监测系统</title>
+    <meta name="description" content="这是一个 index 页面">
+    <meta name="keywords" content="index">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <link rel="icon" type="image/png" href="../display/static/i/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="../display/static/i/app-icon72x72@2x.png">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+    <script src="../display/static/js/echarts.min.js"></script>
+    <link rel="stylesheet" href="../display/static/css/amazeui.min.css"/>
+    <link rel="stylesheet" href="../display/static/css/amazeui.datatables.min.css"/>
+    <link rel="stylesheet" href="../display/static/css/app.css">
+    <script src="../display/static/js/jquery.min.js"></script>
+
+</head>
+
+<body data-type="temperature">
+<script src="../display/static/js/theme.js"></script>
+<div class="am-g tpl-g">
+    <!-- 头部 -->
+    <header>
+        <!-- logo -->
+        <div class="am-fl tpl-header-logo">
+            <a href="javascript:;">燃气监测系统</a>
+        </div>
+        <!-- 右侧内容 -->
+        <div class="tpl-header-fluid">
+            <!-- 侧边切换 -->
+            <div class="am-fl tpl-header-switch-button am-icon-list">
+                    <span>
+
+                </span>
+            </div>
+            <!-- 搜索 -->
+            <div class="am-fl tpl-header-search">
+                <form class="tpl-header-search-form" action="javascript:;">
+                    <button class="tpl-header-search-btn am-icon-search"></button>
+                    <input class="tpl-header-search-box" type="text" placeholder="搜索内容...">
+                </form>
+            </div>
+            <!-- 其它功能-->
+            <div class="am-fr tpl-header-navbar">
+                <ul>
+                    <!-- 欢迎语 -->
+                    <li class="am-text-sm tpl-header-navbar-welcome">
+                        <a href="javascript:;">欢迎你, <span>Admin</span> </a>
+                    </li>
+
+
+                    <!-- 退出 -->
+                    <li class="am-text-sm">
+                        <a href="javascript:;">
+                            <span class="am-icon-sign-out"></span> 退出
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </header>
+    <!-- 风格切换 -->
+    <div class="tpl-skiner">
+        <div class="tpl-skiner-toggle am-icon-cog">
+        </div>
+        <div class="tpl-skiner-content">
+            <div class="tpl-skiner-content-title">
+                选择主题
+            </div>
+            <div class="tpl-skiner-content-bar">
+                <span class="skiner-color skiner-white" data-color="theme-white"></span>
+                <span class="skiner-color skiner-black" data-color="theme-black"></span>
+            </div>
+        </div>
+    </div>
+    <!-- 侧边导航栏 -->
+    <div class="left-sidebar">
+        <!-- 用户信息 -->
+        <div class="tpl-sidebar-user-panel">
+            <div class="tpl-user-panel-slide-toggleable">
+                <div class="tpl-user-panel-profile-picture">
+                    <img src="../display/static/img/tt.jpg" alt="">
+                </div>
+                <span class="user-panel-logged-in-text">
+              <i class="am-icon-circle-o am-text-success tpl-user-panel-status-icon"></i>
+              Admin1
+          </span>
+                <a href="javascript:;" class="tpl-user-panel-action-link"> <span class="am-icon-pencil"></span> 账号设置</a>
+            </div>
+        </div>
+
+        <!-- 菜单 -->
+        <ul class="sidebar-nav">
+            <li class="sidebar-nav-heading">MENU <span class="sidebar-nav-heading-info"> </span></li>
+            <li class="sidebar-nav-link">
+                <a href="{% url 'display:index' %}">
+                    <i class="am-icon-home sidebar-nav-link-logo"></i> 首页
+                </a>
+            </li>
+            <li class="sidebar-nav-link">
+                <a href="javascript:;" class="sidebar-nav-sub-title">
+                    <i class="am-icon-bar-chart sidebar-nav-link-logo"></i> 各项数据展示
+                    <span class="am-icon-chevron-down am-fr am-margin-right-sm sidebar-nav-sub-ico"></span>
+                </a>
+                <ul class="sidebar-nav sidebar-nav-sub">
+                    <li class="sidebar-nav-link">
+                        <a href="{% url 'display:charts_gas' %}">
+                            <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 燃气
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-link">
+                        <a href="{% url 'display:charts_temp' %}">
+                            <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 温度
+                        </a>
+                    </li>
+
+                    <li class="sidebar-nav-link">
+                        <a href="{% url 'display:charts_pres' %}">
+                            <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 压力
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sidebar-nav-link">
+                <a href="{% url 'display:alarm' %}" class="active">
+                    <i class="am-icon-table sidebar-nav-link-logo"></i> 预警监测
+                </a>
+            </li>
+            <li class="sidebar-nav-link">
+                <a href="{% url 'display:calendar_logs' %}">
+                    <i class="am-icon-calendar sidebar-nav-link-logo"></i> 日志
+                </a>
+            </li>
+            {#                <li class="sidebar-nav-link">#}
+            {#                    <a href="form.html">#}
+            {#                        <i class="am-icon-wpforms sidebar-nav-link-logo"></i> 表单#}
+            {##}
+            {#                    </a>#}
+            {#                </li>#}
+
+            {#                <li class="sidebar-nav-heading">Page<span class="sidebar-nav-heading-info"> 常用页面</span></li>#}
+
+            {#                <li class="sidebar-nav-link">#}
+            {#                    <a href="sign-up.html">#}
+            {#                        <i class="am-icon-clone sidebar-nav-link-logo"></i> 注册#}
+            {#                        <span class="am-badge am-badge-secondary sidebar-nav-link-logo-ico am-round am-fr am-margin-right-sm">6</span>#}
+            {#                    </a>#}
+            {#                </li>#}
+            {#                <li class="sidebar-nav-link">#}
+            {#                    <a href="login.html">#}
+            {#                        <i class="am-icon-key sidebar-nav-link-logo"></i> 登录#}
+            {#                    </a>#}
+            {#                </li>#}
+            {#                <li class="sidebar-nav-link">#}
+            {#                    <a href="404.html">#}
+            {#                        <i class="am-icon-tv sidebar-nav-link-logo"></i> 404错误#}
+            {#                    </a>#}
+            {#                </li>#}
+
+        </ul>
+    </div>
+
+    <!-- 内容区域 -->
+    <div class="tpl-content-wrapper">
+
+        <div class="container-fluid am-cf">
+            <div class="row">
+                <div class="am-u-sm-12 am-u-md-12 am-u-lg-9">
+                    <div class="page-header-heading"><span class="am-icon-table"></span> 预警监测
+                        <small> </small>
+                    </div>
+                    <p class="page-header-description">每一天的燃气系统的安全指数。颜色越浅安全指数越高。</p>
+                </div>
+                <div class="am-u-lg-3 tpl-index-settings-button">
+                    <button type="button" class="page-header-button"><span class="am-icon-paint-brush"></span> 设置
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row-content am-cf">
+            <div class="widget am-cf">
+                <div class="widget-head am-cf">
+                    <div class="widget-title am-fl">目前状态：<b>安全</b></div>
+                    <div class="widget-function am-fr">
+                        <a href="javascript:;" class="am-icon-cog"></a>
+                    </div>
+                </div>
+                <div class="widget-body am-fr">
+                    <div style="height: 400px" class="" id="test-alarm">
+
+                    </div>
+
+                    <script type="text/javascript">
+                        // 基于准备好的dom，初始化echarts实例
+                        var myChart = echarts.init(document.getElementById('test-alarm'));
+
+                        // 指定图表的配置项和数据
+
+                        var hours = ['12a', '1a', '2a', '3a', '4a', '5a', '6a',
+                            '7a', '8a', '9a', '10a', '11a',
+                            '12p', '1p', '2p', '3p', '4p', '5p',
+                            '6p', '7p', '8p', '9p', '10p', '11p'];
+                        var days = ['Saturday', 'Friday', 'Thursday',
+                            'Wednesday', 'Tuesday', 'Monday', 'Sunday'];
+
+                        var data = [[0, 0, 5], [0, 1, 1], [0, 2, 0], [0, 3, 0], [0, 4, 0], [0, 5, 0], [0, 6, 0], [0, 7, 0], [0, 8, 0], [0, 9, 0], [0, 10, 0], [0, 11, 2], [0, 12, 4], [0, 13, 1], [0, 14, 1], [0, 15, 3], [0, 16, 4], [0, 17, 6], [0, 18, 4], [0, 19, 4], [0, 20, 3], [0, 21, 3], [0, 22, 2], [0, 23, 5], [1, 0, 7], [1, 1, 0], [1, 2, 0], [1, 3, 0], [1, 4, 0], [1, 5, 0], [1, 6, 0], [1, 7, 0], [1, 8, 0], [1, 9, 0], [1, 10, 5], [1, 11, 2], [1, 12, 2], [1, 13, 6], [1, 14, 9], [1, 15, 11], [1, 16, 6], [1, 17, 7], [1, 18, 8], [1, 19, 12], [1, 20, 5], [1, 21, 5], [1, 22, 7], [1, 23, 2], [2, 0, 1], [2, 1, 1], [2, 2, 0], [2, 3, 0], [2, 4, 0], [2, 5, 0], [2, 6, 0], [2, 7, 0], [2, 8, 0], [2, 9, 0], [2, 10, 3], [2, 11, 2], [2, 12, 1], [2, 13, 9], [2, 14, 8], [2, 15, 10], [2, 16, 6], [2, 17, 5], [2, 18, 5], [2, 19, 5], [2, 20, 7], [2, 21, 4], [2, 22, 2], [2, 23, 4], [3, 0, 7], [3, 1, 3], [3, 2, 0], [3, 3, 0], [3, 4, 0], [3, 5, 0], [3, 6, 0], [3, 7, 0], [3, 8, 1], [3, 9, 0], [3, 10, 5], [3, 11, 4], [3, 12, 7], [3, 13, 14], [3, 14, 13], [3, 15, 12], [3, 16, 9], [3, 17, 5], [3, 18, 5], [3, 19, 10], [3, 20, 6], [3, 21, 4], [3, 22, 4], [3, 23, 1], [4, 0, 1], [4, 1, 3], [4, 2, 0], [4, 3, 0], [4, 4, 0], [4, 5, 1], [4, 6, 0], [4, 7, 0], [4, 8, 0], [4, 9, 2], [4, 10, 4], [4, 11, 4], [4, 12, 2], [4, 13, 4], [4, 14, 4], [4, 15, 14], [4, 16, 12], [4, 17, 1], [4, 18, 8], [4, 19, 5], [4, 20, 3], [4, 21, 7], [4, 22, 3], [4, 23, 0], [5, 0, 2], [5, 1, 1], [5, 2, 0], [5, 3, 3], [5, 4, 0], [5, 5, 0], [5, 6, 0], [5, 7, 0], [5, 8, 2], [5, 9, 0], [5, 10, 4], [5, 11, 1], [5, 12, 5], [5, 13, 10], [5, 14, 5], [5, 15, 7], [5, 16, 11], [5, 17, 6], [5, 18, 0], [5, 19, 5], [5, 20, 3], [5, 21, 4], [5, 22, 2], [5, 23, 0], [6, 0, 1], [6, 1, 0], [6, 2, 0], [6, 3, 0], [6, 4, 0], [6, 5, 0], [6, 6, 0], [6, 7, 0], [6, 8, 0], [6, 9, 0], [6, 10, 1], [6, 11, 0], [6, 12, 2], [6, 13, 1], [6, 14, 3], [6, 15, 4], [6, 16, 0], [6, 17, 0], [6, 18, 0], [6, 19, 0], [6, 20, 1], [6, 21, 2], [6, 22, 2], [6, 23, 6]];
+
+                        data = data.map(function (item) {
+                            return [item[1], item[0], item[2] || '-'];
+                        });
+
+                        var option = {
+                            tooltip: {
+                                position: 'top'
+                            },
+                            animation: false,
+                            grid: {
+                                height: '50%',
+                                y: '10%'
+                            },
+                            xAxis: {
+                                type: 'category',
+                                data: hours,
+                                splitArea: {
+                                    show: true
+                                }
+                            },
+                            yAxis: {
+                                type: 'category',
+                                data: days,
+                                splitArea: {
+                                    show: true
+                                }
+                            },
+                            visualMap: {
+                                min: 0,
+                                max: 10,
+                                calculable: true,
+                                orient: 'horizontal',
+                                left: 'center',
+                                bottom: '15%'
+                            },
+                            series: [{
+                                name: 'Punch Card',
+                                type: 'heatmap',
+                                data: data,
+                                label: {
+                                    normal: {
+                                        show: true
+                                    }
+                                },
+                                itemStyle: {
+                                    emphasis: {
+                                        shadowBlur: 10,
+                                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                                    }
+                                }
+                            }]
+                        };
+
+                        myChart.setOption(option);
+                    </script>
+
+                </div>
+            </div>
+
+
+            <div class="row">
+
+                <div class="am-u-sm-12 am-u-md-12 am-u-lg-12">
+                    <div class="widget am-cf">
+                        <div class="widget-head am-cf">
+                            <div class="widget-title am-fl">ss</div>
+                            <div class="widget-function am-fr">
+                                <a href="javascript:;" class="am-icon-cog"></a>
+                            </div>
+                        </div>
+                        <div class="widget-body  widget-body-lg am-fr">
+
+                            <table width="100%" class="am-table am-table-compact am-table-striped tpl-table-black "
+                                   id="example-r">
+                                <thead>
+                                <tr>
+                                    <th>文章标题</th>
+                                    <th>作者</th>
+                                    <th>时间</th>
+                                    <th>操作</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <tr class="gradeX">
+                                    <td>Amaze UI 模式窗口</td>
+                                    <td>张鹏飞</td>
+                                    <td>2016-09-26</td>
+                                    <td>
+                                        <div class="tpl-table-black-operation">
+                                            <a href="javascript:;">
+                                                <i class="am-icon-pencil"></i> 编辑
+                                            </a>
+                                            <a href="javascript:;" class="tpl-table-black-operation-del">
+                                                <i class="am-icon-trash"></i> 删除
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="even gradeC">
+                                    <td>有适配微信小程序的计划吗</td>
+                                    <td>天纵之人</td>
+                                    <td>2016-09-26</td>
+                                    <td>
+                                        <div class="tpl-table-black-operation">
+                                            <a href="javascript:;">
+                                                <i class="am-icon-pencil"></i> 编辑
+                                            </a>
+                                            <a href="javascript:;" class="tpl-table-black-operation-del">
+                                                <i class="am-icon-trash"></i> 删除
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="gradeX">
+                                    <td>请问有没有amazeui 分享插件</td>
+                                    <td>王宽师</td>
+                                    <td>2016-09-26</td>
+                                    <td>
+                                        <div class="tpl-table-black-operation">
+                                            <a href="javascript:;">
+                                                <i class="am-icon-pencil"></i> 编辑
+                                            </a>
+                                            <a href="javascript:;" class="tpl-table-black-operation-del">
+                                                <i class="am-icon-trash"></i> 删除
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="even gradeC">
+                                    <td>关于input输入框的问题</td>
+                                    <td>着迷</td>
+                                    <td>2016-09-26</td>
+                                    <td>
+                                        <div class="tpl-table-black-operation">
+                                            <a href="javascript:;">
+                                                <i class="am-icon-pencil"></i> 编辑
+                                            </a>
+                                            <a href="javascript:;" class="tpl-table-black-operation-del">
+                                                <i class="am-icon-trash"></i> 删除
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="even gradeC">
+                                    <td>有没有发现官网上的下载包不好用</td>
+                                    <td>醉里挑灯看键</td>
+                                    <td>2016-09-26</td>
+                                    <td>
+                                        <div class="tpl-table-black-operation">
+                                            <a href="javascript:;">
+                                                <i class="am-icon-pencil"></i> 编辑
+                                            </a>
+                                            <a href="javascript:;" class="tpl-table-black-operation-del">
+                                                <i class="am-icon-trash"></i> 删除
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <tr class="even gradeC">
+                                    <td>我建议WEB版本文件引入问题</td>
+                                    <td>罢了</td>
+                                    <td>2016-09-26</td>
+                                    <td>
+                                        <div class="tpl-table-black-operation">
+                                            <a href="javascript:;">
+                                                <i class="am-icon-pencil"></i> 编辑
+                                            </a>
+                                            <a href="javascript:;" class="tpl-table-black-operation-del">
+                                                <i class="am-icon-trash"></i> 删除
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <!-- more data -->
+                                </tbody>
+                            </table>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+
+    </div>
+</div>
+</div>
+<script src="../display/static/js/amazeui.min.js"></script>
+<script src="../display/static/js/amazeui.datatables.min.js"></script>
+<script src="../display/static/js/dataTables.responsive.min.js"></script>
+<script src="../display/static/js/app.js"></script>
+
+</body>
+
+</html>

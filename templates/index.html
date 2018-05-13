@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>首页 | 燃气监测系统</title>
+    <meta name="description" content="这是一个 index 页面">
+    <meta name="keywords" content="index">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
+    <link rel="icon" type="image/png" href="../display/static/i/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="../display/static/i/app-icon72x72@2x.png">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI"/>
+    <script src="../display/static/js/echarts.min.js"></script>
+    <link rel="stylesheet" href="../display/static/css/amazeui.min.css"/>
+    <link rel="stylesheet" href="../display/static/css/amazeui.datatables.min.css"/>
+    <link rel="stylesheet" href="../display/static/css/app.css">
+    <script src="../display/static/js/jquery.min.js"></script>
+
+</head>
+
+<body data-type="index">
+<script src="../display/static/js/theme.js"></script>
+<div class="am-g tpl-g">
+    <!-- 头部 -->
+    <header>
+        <!-- logo -->
+        <div class="am-fl tpl-header-logo">
+            <a href="javascript:;">燃气监测系统</a>
+        </div>
+        <!-- 右侧内容 -->
+        <div class="tpl-header-fluid">
+            <!-- 侧边切换 -->
+            <div class="am-fl tpl-header-switch-button am-icon-list">
+                    <span>
+
+                </span>
+            </div>
+            <!-- 搜索 -->
+            <div class="am-fl tpl-header-search">
+                <form class="tpl-header-search-form" action="javascript:;">
+                    <button class="tpl-header-search-btn am-icon-search"></button>
+                    <input class="tpl-header-search-box" type="text" placeholder="搜索内容...">
+                </form>
+            </div>
+            <!-- 其它功能-->
+            <div class="am-fr tpl-header-navbar">
+                <ul>
+                    <!-- 欢迎语 -->
+                    <li class="am-text-sm tpl-header-navbar-welcome">
+                        <a href="javascript:;">欢迎你, <span>Admin1</span> </a>
+                    </li>
+
+                    <!-- 新邮件 -->
+                    {#                        <li class="am-dropdown tpl-dropdown" data-am-dropdown>#}
+                    {#                            <a href="javascript:;" class="am-dropdown-toggle tpl-dropdown-toggle" data-am-dropdown-toggle>#}
+                    {#                                <i class="am-icon-envelope"></i>#}
+                    {#                                <span class="am-badge am-badge-success am-round item-feed-badge">4</span>#}
+                    {#                            </a>#}
+                    {#                            <!-- 弹出列表 -->#}
+                    {#                            <ul class="am-dropdown-content tpl-dropdown-content">#}
+                    {#                                <li class="tpl-dropdown-menu-messages">#}
+                    {#                                    <a href="javascript:;" class="tpl-dropdown-menu-messages-item am-cf">#}
+                    {#                                        <div class="menu-messages-ico">#}
+                    {#                                            <img src="../display/static/img/user04.png" alt="">#}
+                    {#                                        </div>#}
+                    {#                                        <div class="menu-messages-time">#}
+                    {#                                            3小时前#}
+                    {#                                        </div>#}
+                    {#                                        <div class="menu-messages-content">#}
+                    {#                                            <div class="menu-messages-content-title">#}
+                    {#                                                <i class="am-icon-circle-o am-text-success"></i>#}
+                    {#                                                <span>夕风色</span>#}
+                    {#                                            </div>#}
+                    {#                                            <div class="am-text-truncate"> Amaze UI 的诞生，依托于 GitHub 及其他技术社区上一些优秀的资源；Amaze UI 的成长，则离不开用户的支持。 </div>#}
+                    {#                                            <div class="menu-messages-content-time">2016-09-21 下午 16:40</div>#}
+                    {#                                        </div>#}
+                    {#                                    </a>#}
+                    {#                                </li>#}
+                    {##}
+                    {#                                <li class="tpl-dropdown-menu-messages">#}
+                    {#                                    <a href="javascript:;" class="tpl-dropdown-menu-messages-item am-cf">#}
+                    {#                                        <div class="menu-messages-ico">#}
+                    {#                                            <img src="../display/static/img/user02.png" alt="">#}
+                    {#                                        </div>#}
+                    {#                                        <div class="menu-messages-time">#}
+                    {#                                            5天前#}
+                    {#                                        </div>#}
+                    {#                                        <div class="menu-messages-content">#}
+                    {#                                            <div class="menu-messages-content-title">#}
+                    {#                                                <i class="am-icon-circle-o am-text-warning"></i>#}
+                    {#                                                <span>禁言小张</span>#}
+                    {#                                            </div>#}
+                    {#                                            <div class="am-text-truncate"> 为了能最准确的传达所描述的问题， 建议你在反馈时附上演示，方便我们理解。 </div>#}
+                    {#                                            <div class="menu-messages-content-time">2016-09-16 上午 09:23</div>#}
+                    {#                                        </div>#}
+                    {#                                    </a>#}
+                    {#                                </li>#}
+                    {#                                <li class="tpl-dropdown-menu-messages">#}
+                    {#                                    <a href="javascript:;" class="tpl-dropdown-menu-messages-item am-cf">#}
+                    {#                                        <i class="am-icon-circle-o"></i> 进入列表…#}
+                    {#                                    </a>#}
+                    {#                                </li>#}
+                    {#                            </ul>#}
+                    {#                        </li>#}
+
+                    <!-- 新提示 -->
+                    {#                        <li class="am-dropdown" data-am-dropdown>#}
+                    {#                            <a href="javascript:;" class="am-dropdown-toggle" data-am-dropdown-toggle>#}
+                    {#                                <i class="am-icon-bell"></i>#}
+                    {#                                <span class="am-badge am-badge-warning am-round item-feed-badge">5</span>#}
+                    {#                            </a>#}
+                    {##}
+                    {#                            <!-- 弹出列表 -->#}
+                    {#                            <ul class="am-dropdown-content tpl-dropdown-content">#}
+                    {#                                <li class="tpl-dropdown-menu-notifications">#}
+                    {#                                    <a href="javascript:;" class="tpl-dropdown-menu-notifications-item am-cf">#}
+                    {#                                        <div class="tpl-dropdown-menu-notifications-title">#}
+                    {#                                            <i class="am-icon-line-chart"></i>#}
+                    {#                                            <span> 有6笔新的销售订单</span>#}
+                    {#                                        </div>#}
+                    {#                                        <div class="tpl-dropdown-menu-notifications-time">#}
+                    {#                                            12分钟前#}
+                    {#                                        </div>#}
+                    {#                                    </a>#}
+                    {#                                </li>#}
+                    {#                                <li class="tpl-dropdown-menu-notifications">#}
+                    {#                                    <a href="javascript:;" class="tpl-dropdown-menu-notifications-item am-cf">#}
+                    {#                                        <div class="tpl-dropdown-menu-notifications-title">#}
+                    {#                                            <i class="am-icon-star"></i>#}
+                    {#                                            <span> 有3个来自人事部的消息</span>#}
+                    {#                                        </div>#}
+                    {#                                        <div class="tpl-dropdown-menu-notifications-time">#}
+                    {#                                            30分钟前#}
+                    {#                                        </div>#}
+                    {#                                    </a>#}
+                    {#                                </li>#}
+                    {#                                <li class="tpl-dropdown-menu-notifications">#}
+                    {#                                    <a href="javascript:;" class="tpl-dropdown-menu-notifications-item am-cf">#}
+                    {#                                        <div class="tpl-dropdown-menu-notifications-title">#}
+                    {#                                            <i class="am-icon-folder-o"></i>#}
+                    {#                                            <span> 上午开会记录存档</span>#}
+                    {#                                        </div>#}
+                    {#                                        <div class="tpl-dropdown-menu-notifications-time">#}
+                    {#                                            1天前#}
+                    {#                                        </div>#}
+                    {#                                    </a>#}
+                    {#                                </li>#}
+                    {##}
+                    {##}
+                    {#                                <li class="tpl-dropdown-menu-notifications">#}
+                    {#                                    <a href="javascript:;" class="tpl-dropdown-menu-notifications-item am-cf">#}
+                    {#                                        <i class="am-icon-bell"></i> 进入列表…#}
+                    {#                                    </a>#}
+                    {#                                </li>#}
+                    {#                            </ul>#}
+                    {#                        </li>#}
+
+                    <!-- 退出 -->
+                    <li class="am-text-sm">
+                        <a href="javascript:;">
+                            <span class="am-icon-sign-out"></span> 退出
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </header>
+    <!-- 风格切换 -->
+    <div class="tpl-skiner">
+        <div class="tpl-skiner-toggle am-icon-cog">
+        </div>
+        <div class="tpl-skiner-content">
+            <div class="tpl-skiner-content-title">
+                选择主题
+            </div>
+            <div class="tpl-skiner-content-bar">
+                <span class="skiner-color skiner-white" data-color="theme-white"></span>
+                <span class="skiner-color skiner-black" data-color="theme-black"></span>
+            </div>
+        </div>
+    </div>
+    <!-- 侧边导航栏 -->
+    <div class="left-sidebar">
+        <!-- 用户信息 -->
+        <div class="tpl-sidebar-user-panel">
+            <div class="tpl-user-panel-slide-toggleable">
+                <div class="tpl-user-panel-profile-picture">
+                    <img src="../display/static/img/tt.jpg" alt="">
+                </div>
+                <span class="user-panel-logged-in-text">
+              <i class="am-icon-circle-o am-text-success tpl-user-panel-status-icon"></i>
+              Admin1
+          </span>
+                <a href="javascript:;" class="tpl-user-panel-action-link"> <span class="am-icon-pencil"></span> 账号设置</a>
+            </div>
+        </div>
+
+        <!-- 菜单 -->
+        <ul class="sidebar-nav">
+            <li class="sidebar-nav-heading">MENU <span class="sidebar-nav-heading-info"> </span></li>
+            <li class="sidebar-nav-link">
+                <a href="{% url 'display:index' %}" class="active">
+                    <i class="am-icon-home sidebar-nav-link-logo"></i> 首页
+                </a>
+            </li>
+            <li class="sidebar-nav-link">
+                <a href="javascript:;" class="sidebar-nav-sub-title">
+                    <i class="am-icon-bar-chart sidebar-nav-link-logo"></i> 各项数据展示
+                    <span class="am-icon-chevron-down am-fr am-margin-right-sm sidebar-nav-sub-ico"></span>
+                </a>
+                <ul class="sidebar-nav sidebar-nav-sub">
+                    <li class="sidebar-nav-link">
+                        <a href="{% url 'display:charts_gas' %}">
+                            <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 燃气
+                        </a>
+                    </li>
+                    <li class="sidebar-nav-link">
+                        <a href="{% url 'display:charts_temp' %}">
+                            <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 温度
+                        </a>
+                    </li>
+
+                    <li class="sidebar-nav-link">
+                        <a href="{% url 'display:charts_pres' %}">
+                            <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 压力
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="sidebar-nav-link">
+                <a href="{% url 'display:alarm' %}">
+                    <i class="am-icon-table sidebar-nav-link-logo"></i> 预警监测
+                </a>
+            </li>
+            <li class="sidebar-nav-link">
+                <a href="{% url 'display:calendar_logs' %}">
+                    <i class="am-icon-calendar sidebar-nav-link-logo"></i> 日志
+                </a>
+            </li>
+            {#                <li class="sidebar-nav-link">#}
+            {#                    <a href="form.html">#}
+            {#                        <i class="am-icon-wpforms sidebar-nav-link-logo"></i> 表单#}
+            {##}
+            {#                    </a>#}
+            {#                </li>#}
+
+            {#                <li class="sidebar-nav-heading">Page<span class="sidebar-nav-heading-info"> 常用页面</span></li>#}
+
+            {#                <li class="sidebar-nav-link">#}
+            {#                    <a href="sign-up.html">#}
+            {#                        <i class="am-icon-clone sidebar-nav-link-logo"></i> 注册#}
+            {#                        <span class="am-badge am-badge-secondary sidebar-nav-link-logo-ico am-round am-fr am-margin-right-sm">6</span>#}
+            {#                    </a>#}
+            {#                </li>#}
+            {#                <li class="sidebar-nav-link">#}
+            {#                    <a href="login.html">#}
+            {#                        <i class="am-icon-key sidebar-nav-link-logo"></i> 登录#}
+            {#                    </a>#}
+            {#                </li>#}
+            {#                <li class="sidebar-nav-link">#}
+            {#                    <a href="404.html">#}
+            {#                        <i class="am-icon-tv sidebar-nav-link-logo"></i> 404错误#}
+            {#                    </a>#}
+            {#                </li>#}
+
+        </ul>
+    </div>
+
+
+    <!-- 内容区域 -->
+    <div class="tpl-content-wrapper">
+
+        <div class="container-fluid am-cf">
+            <div class="row">
+                <div class="am-u-sm-12 am-u-md-12 am-u-lg-9">
+                    <div class="page-header-heading"><span class="am-icon-home page-header-heading-icon"></span> 燃气监测系统
+                        <small></small>
+                    </div>
+                    <p class="page-header-description">燃气系统是城市基础设施的重要组成部分，对社会环境和现代化城市建设起着举足轻重的作用。</p>
+                    <p class="page-header-description">该系统在燃气监测过程中对管道压力、温度、燃气流量数据进行实时监测并可视化。</p>
+                    <p class="page-header-description">同时，支持监控日志和预警监测。</p>
+                </div>
+                <div class="am-u-lg-3 tpl-index-settings-button">
+                    <button type="button" class="page-header-button"><span class="am-icon-paint-brush"></span> 设置
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="row-content am-cf">
+            <div class="row  am-cf">
+                <div style="width: 25%" class="am-u-sm-12 am-u-md-6 am-u-lg-4">
+                    <div class="widget widget-primary am-cf">
+                        <div class="widget-statistic-header">
+                            温度数据统计共
+                        </div>
+                        <div class="widget-statistic-body">
+                            <div class="widget-statistic-value">
+                                2587 条
+                            </div>
+                            <div class="widget-statistic-description">
+                                本月监测到最高温度 <strong>30</strong> 度
+                            </div>
+                            <span class="widget-statistic-icon am-icon-credit-card-alt"></span>
+                        </div>
+                    </div>
+                </div>
+                <div style="width: 25%" class="am-u-sm-12 am-u-md-6 am-u-lg-4">
+                    <div class="widget widget-primary am-cf">
+                        <div class="widget-statistic-header">
+                            压力数据统计共
+                        </div>
+                        <div class="widget-statistic-body">
+                            <div class="widget-statistic-value">
+                                2498 条
+                            </div>
+                            <div class="widget-statistic-description">
+                                本月监测到最高压力 <strong>5.7</strong> KPa
+                            </div>
+                            <span class="widget-statistic-icon am-icon-credit-card-alt"></span>
+                        </div>
+                    </div>
+                </div>
+                <div style="width: 25%" class="am-u-sm-12 am-u-md-6 am-u-lg-4">
+                    <div class="widget widget-purple am-cf">
+                        <div class="widget-statistic-header">
+                            燃气数据统计共
+                        </div>
+                        <div class="widget-statistic-body">
+                            <div class="widget-statistic-value">
+                                2822 条
+                            </div>
+                            <div class="widget-statistic-description">
+                                本月总共使用 <strong>27.6</strong> 立方
+                            </div>
+                            <span class="widget-statistic-icon am-icon-support"></span>
+                        </div>
+                    </div>
+                </div>
+                <div style="width: 25%" class="am-u-sm-12 am-u-md-6 am-u-lg-4">
+                    <div style="background: #00a23f;height: 174px;" class="widget widget-alarm am-cf">
+                        <div class="widget-statistic-header">
+                            目前运行状态
+                        </div>
+                        <div class="widget-statistic-body">
+                            <div class="widget-statistic-value">
+                                安全
+                            </div>
+                            <div class="widget-statistic-description">
+                                本月目前安全事故次数 0 次
+                            </div>
+                            <span class="widget-statistic-icon am-icon-support"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row am-cf">
+                <div class="am-u-sm-12 am-u-md-12">
+                    <div class="widget am-cf">
+                        <div class="widget-head am-cf">
+                            <div class="widget-title am-fl">综合分析</div>
+                            <div class="widget-function am-fr">
+                                <a href="javascript:;" class="am-icon-cog"></a>
+                            </div>
+                        </div>
+                        <div style="height: 300px" class="widget-body-md widget-body tpl-amendment-echarts am-fr"
+                             id="test-zh">
+
+                        </div>
+
+                        <script type="text/javascript">
+
+                            var echartsM = echarts.init(document.getElementById('test-zh'));
+                            var optionM = {
+                                tooltip: {
+                                    trigger: 'axis',
+                                    axisPointer: {
+                                        type: 'cross',
+                                        crossStyle: {
+                                            color: '#999'
+                                        }
+                                    }
+                                },
+                                toolbox: {
+                                    feature: {
+                                        dataView: {show: true, readOnly: false},
+                                        magicType: {show: true, type: ['line', 'bar']},
+                                        restore: {show: true},
+                                        saveAsImage: {show: true}
+                                    }
+                                },
+                                legend: {
+                                    data: ['温度', '压力', '燃气流量']
+                                },
+                                xAxis: [
+                                    {
+                                        type: 'category',
+                                        data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+                                        axisPointer: {
+                                            type: 'shadow'
+                                        }
+                                    }
+                                ],
+                                yAxis: [
+                                    {
+                                        type: 'value',
+                                        name: '温度 & 压力',
+                                        min: 0,
+                                        max: 40,
+                                        interval: 5,
+                                        axisLabel: {
+                                            formatter: '{value}'
+                                        }
+                                    },
+                                    {
+                                        type: 'value',
+                                        name: '燃气流量',
+                                        min: 0,
+                                        max: 40,
+                                        interval: 5,
+                                        axisLabel: {
+                                            formatter: '{value} 立方'
+                                        }
+                                    }
+                                ],
+                                series: [
+                                    {
+                                        name: '温度',
+                                        type: 'bar',
+                                        data: [12.0, 14.9, 15.4, 13.2, 15.6, 16.7, 17.6, 16.2, 16.6, 10.0, 16.4, 13.3]
+                                    },
+                                    {
+                                        name: '压力',
+                                        type: 'bar',
+                                        data: [2.6, 5.9, 6.0, 6.4, 8.7, 7.7, 5.6, 6.2, 8.7, 8.8, 6.0, 2.3]
+                                    },
+                                    {
+                                        name: '燃气流量',
+                                        type: 'line',
+                                        yAxisIndex: 1,
+                                        data: [12.0, 12.2, 13.3, 14.5, 16.3, 18.2, 20.3, 23.4, 23.0, 16.5, 15.6, 16.2]
+                                    }
+                                ]
+                            };
+
+                            echartsM.setOption(optionM);
+                        </script>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+            <div class="row am-cf">
+                <div class="am-u-sm-12 am-u-md-8">
+                    <div class="widget am-cf">
+                        <div class="widget-head am-cf">
+                            <div class="widget-title am-fl">本周燃气流量</div>
+                            <div class="widget-function am-fr">
+                                <a href="javascript:;" class="am-icon-cog"></a>
+                            </div>
+                        </div>
+                        <div style="height: 300px" class="widget-body-md widget-body tpl-amendment-echarts am-fr" id="test-zhou">
+
+                        </div>
+
+                        <script type="text/javascript">
+
+
+                            var echartsA = echarts.init(document.getElementById('test-zhou'));
+                            var option = {
+                                tooltip: {
+                                    trigger: 'axis'
+                                },
+                                grid: {
+                                    top: '3%',
+                                    left: '3%',
+                                    right: '4%',
+                                    bottom: '3%',
+                                    containLabel: true
+                                },
+                                xAxis: [{
+                                    type: 'category',
+                                    boundaryGap: false,
+                                    data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+                                }],
+                                yAxis: [{
+                                    type: 'value'
+                                }],
+                                textStyle: {
+                                    color: '#838FA1'
+                                },
+                                series: [{
+                                    name: '燃气消耗',
+                                    type: 'line',
+                                    stack: '总量',
+                                    areaStyle: {normal: {}},
+                                    data: [4.2, 3.5, 3.9, 5.1, 4.6, 5.7, 6.7],
+                                    itemStyle: {
+                                        normal: {
+                                            color: '#a36edb',
+                                            borderColor: '#a36edb',
+                                            borderWidth: '2',
+                                            borderType: 'solid',
+                                            opacity: '1'
+                                        },
+                                        emphasis: {}
+                                    }
+                                }]
+                            };
+
+                            echartsA.setOption(option);
+
+                        </script>
+
+                    </div>
+                </div>
+
+                <div class="am-u-sm-12 am-u-md-4">
+                    <div class="widget am-cf">
+                        <div class="widget-head am-cf">
+                            <div class="widget-title am-fl">温度压力分布</div>
+                            <div class="widget-function am-fr">
+                                <a href="javascript:;" class="am-icon-cog"></a>
+                            </div>
+                        </div>
+                        <div style="height: 300px" class="widget-body widget-body-md am-fr" , id="test-R">
+
+                        </div>
+
+                        <script type="text/javascript">
+                            var echartsP = echarts.init(document.getElementById('test-R'));
+                            var optionP = {
+                                tooltip: {
+                                    trigger: 'axis'
+                                },
+                                legend: {
+                                    x: 'center',
+                                    data: ['温度', '压力']
+                                },
+                                radar: [
+                                    {
+                                        indicator: (function () {
+                                            var res = [];
+                                            for (var i = 1; i <= 12; i++) {
+                                                res.push({text: i + '月', max: 100});
+                                            }
+                                            return res;
+                                        })(),
+                                        center: ['50%', '60%'],
+                                        radius: 80
+                                    }
+                                ],
+                                series: [
+                                    {
+                                        type: 'radar',
+                                        itemStyle: {normal: {areaStyle: {type: 'default'}}},
+                                        data: [{
+                                            name: '温度',
+                                            value: [20.6, 25.9, 29.0, 26.4, 28.7, 70.7, 75.6, 82.2, 48.7, 38.8, 56.0, 62.3],
+                                        },
+                                            {
+                                                name: '压力',
+                                                value: [22.0, 24.9, 17.0, 23.2, 25.6, 76.7, 35.6, 62.2, 40.6, 40.0, 56.4, 53.3]
+                                            }
+                                        ]
+                                    }
+                                ]
+                            };
+
+                            echartsP.setOption(optionP);
+                        </script>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+</div>
+<script src="../display/static/js/amazeui.min.js"></script>
+<script src="../display/static/js/amazeui.datatables.min.js"></script>
+<script src="../display/static/js/dataTables.responsive.min.js"></script>
+<script src="../display/static/js/app.js"></script>
+
+</body>
+
+</html>
