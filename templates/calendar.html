@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>日志 | 燃气监测系统</title>
+    <title>家庭日志 | 家庭监测系统</title>
     <meta name="description" content="这是一个 index 页面">
     <meta name="keywords" content="index">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,7 +28,7 @@
         <header>
             <!-- logo -->
             <div class="am-fl tpl-header-logo">
-                <a href="javascript:;">燃气监测系统</a>
+                <a href="javascript:;">老王一家家庭监测系统</a>
             </div>
             <!-- 右侧内容 -->
             <div class="tpl-header-fluid">
@@ -116,13 +116,13 @@
                         </li>
                         <li class="sidebar-nav-link">
                             <a href="{% url 'display:charts_temp' %}">
-                                <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 温度
+                                <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 用水量
                             </a>
                         </li>
 
                         <li class="sidebar-nav-link">
                             <a href="{% url 'display:charts_pres' %}">
-                                <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 压力
+                                <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 用电量
                             </a>
                         </li>
                     </ul>
@@ -134,7 +134,7 @@
                 </li>
                 <li class="sidebar-nav-link">
                     <a href="{% url 'display:calendar_logs' %}" class="active">
-                        <i class="am-icon-calendar sidebar-nav-link-logo"></i> 日志
+                        <i class="am-icon-calendar sidebar-nav-link-logo"></i> 家庭日志
                     </a>
                 </li>
 {#                <li class="sidebar-nav-link">#}
@@ -250,7 +250,7 @@
                     prev: '上一月',
                     next: '下一月'
                 },
-                defaultDate: '2016-09-12',
+                defaultDate: '2017-09-12',
                 lang: 'zh-cn',
                 navLinks: true, // can click day/week names to navigate views
                 selectable: true,
@@ -292,64 +292,64 @@
                 },
                 events: [{
                     id: 1,
-                    title: '温度数据异常',
-                    start: '2016-09-01',
-                    end: '2016-09-01'
+                    title: '用水量较多，过于浪费',
+                    start: '2017-09-01',
+                    end: '2017-09-01'
                 }, {
                     id: 2,
                     title: '修改管理员密码',
-                    start: '2016-09-07',
-                    end: '2016-09-07'
+                    start: '2017-09-07',
+                    end: '2017-09-07'
                 }, {
                     id: 3,
                     title: '添加新用户',
-                    start: '2016-09-09',
-                    end: '2016-09-09'
+                    start: '2017-09-09',
+                    end: '2017-09-09'
                 }, {
                     id: 4,
-                    title: '燃气数据异常',
-                    start: '2016-09-10',
-                    end: '2016-09-10'
+                    title: '教师节快乐，学校举办庆祝活动',
+                    start: '2017-09-10',
+                    end: '2017-09-10'
                 }, {
                     id: 5,
                     title: '数据转移',
-                    start: '2016-09-11',
-                    end: '2016-09-11'
+                    start: '2017-09-11',
+                    end: '2017-09-11'
                 }, {
                     id: 6,
-                    title: '危险预警',
-                    start: '2016-09-12',
-                    end: '2016-09-12'
+                    title: '去拜访奶奶家，这一天水电气使用较低',
+                    start: '2017-09-12',
+                    end: '2017-09-12'
                 }, {
                     id: 7,
-                    title: 'bug 修复',
-                    start: '2016-09-13',
-                    end: '2016-09-13'
+                    title: '家庭事件：小王过生日',
+                    start: '2017-09-13',
+                    end: '2017-09-13'
                 }, {
                     id: 8,
-                    title: '燃气数据异常',
-                    start: '2016-09-14',
-                    end: '2016-09-14'
+                    title: '燃气量严重超标，建议节约',
+                    start: '2017-09-15',
+                    end: '2017-09-15'
                 }, {
                     id: 9,
-                    title: '修改管理员密码',
-                    start: '2016-09-16',
-                    end: '2016-09-16'
+                    title: '周六一家去青城山爬山放松',
+                    start: '2017-09-16',
+                    end: '2017-09-16'
                 }, {
                     id: 10,
-                    title: '未监测到压力数据',
-                    start: '2016-09-20',
-                    end: '2016-09-20'
+                    title: '未监测到用水量数据',
+                    start: '2017-09-20',
+                    end: '2017-09-20'
                 }, {
                     id: 11,
                     title: 'bug 修复',
-                    start: '2016-09-23',
-                    end: '2016-09-23'
+                    start: '2017-09-23',
+                    end: '2017-09-23'
                 }, {
                     id: 12,
-                    title: '状态安全',
-                    start: '2016-09-28',
-                    end: '2016-09-28'
+                    title: '用电量较多，建议节约',
+                    start: '2017-09-28',
+                    end: '2017-09-28'
                 }]
             });
 

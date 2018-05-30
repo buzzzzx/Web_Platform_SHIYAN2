@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>预警监测 | 燃气监测系统</title>
+    <title>预警监测 | 家庭监测系统</title>
     <meta name="description" content="这是一个 index 页面">
     <meta name="keywords" content="index">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,7 +28,7 @@
     <header>
         <!-- logo -->
         <div class="am-fl tpl-header-logo">
-            <a href="javascript:;">燃气监测系统</a>
+            <a href="javascript:;">老王一家家庭监测系统</a>
         </div>
         <!-- 右侧内容 -->
         <div class="tpl-header-fluid">
@@ -50,7 +50,7 @@
                 <ul>
                     <!-- 欢迎语 -->
                     <li class="am-text-sm tpl-header-navbar-welcome">
-                        <a href="javascript:;">欢迎你, <span>Admin</span> </a>
+                        <a href="javascript:;">欢迎你, <span>Admin1</span> </a>
                     </li>
 
 
@@ -116,13 +116,13 @@
                     </li>
                     <li class="sidebar-nav-link">
                         <a href="{% url 'display:charts_temp' %}">
-                            <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 温度
+                            <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 用水量
                         </a>
                     </li>
 
                     <li class="sidebar-nav-link">
                         <a href="{% url 'display:charts_pres' %}">
-                            <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 压力
+                            <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 用电量
                         </a>
                     </li>
                 </ul>
@@ -134,7 +134,7 @@
             </li>
             <li class="sidebar-nav-link">
                 <a href="{% url 'display:calendar_logs' %}">
-                    <i class="am-icon-calendar sidebar-nav-link-logo"></i> 日志
+                    <i class="am-icon-calendar sidebar-nav-link-logo"></i> 家庭日志
                 </a>
             </li>
             {#                <li class="sidebar-nav-link">#}
@@ -175,7 +175,7 @@
                     <div class="page-header-heading"><span class="am-icon-table"></span> 预警监测
                         <small> </small>
                     </div>
-                    <p class="page-header-description">每一天的燃气系统的安全指数。颜色越浅安全指数越高。</p>
+                    <p class="page-header-description">每一天的水电气使用情况评估。颜色越浅表示使用量越少，越节约。</p>
                 </div>
                 <div class="am-u-lg-3 tpl-index-settings-button">
                     <button type="button" class="page-header-button"><span class="am-icon-paint-brush"></span> 设置
@@ -188,7 +188,7 @@
         <div class="row-content am-cf">
             <div class="widget am-cf">
                 <div class="widget-head am-cf">
-                    <div class="widget-title am-fl">目前状态：<b>安全</b></div>
+                    <div class="widget-title am-fl">目前状态：<b>较节约</b></div>
                     <div class="widget-function am-fr">
                         <a href="javascript:;" class="am-icon-cog"></a>
                     </div>

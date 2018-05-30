@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>首页 | 燃气监测系统</title>
+    <title>首页 | 家庭监测系统</title>
     <meta name="description" content="这是一个 index 页面">
     <meta name="keywords" content="index">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,7 +28,7 @@
     <header>
         <!-- logo -->
         <div class="am-fl tpl-header-logo">
-            <a href="javascript:;">燃气监测系统</a>
+            <a href="javascript:;">老王一家家庭监测系统</a>
         </div>
         <!-- 右侧内容 -->
         <div class="tpl-header-fluid">
@@ -220,13 +220,13 @@
                     </li>
                     <li class="sidebar-nav-link">
                         <a href="{% url 'display:charts_temp' %}">
-                            <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 温度
+                            <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 用水量
                         </a>
                     </li>
 
                     <li class="sidebar-nav-link">
                         <a href="{% url 'display:charts_pres' %}">
-                            <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 压力
+                            <span class="am-icon-angle-right sidebar-nav-link-logo"></span> 用电量
                         </a>
                     </li>
                 </ul>
@@ -238,7 +238,7 @@
             </li>
             <li class="sidebar-nav-link">
                 <a href="{% url 'display:calendar_logs' %}">
-                    <i class="am-icon-calendar sidebar-nav-link-logo"></i> 日志
+                    <i class="am-icon-calendar sidebar-nav-link-logo"></i> 家庭日志
                 </a>
             </li>
             {#                <li class="sidebar-nav-link">#}
@@ -277,12 +277,12 @@
         <div class="container-fluid am-cf">
             <div class="row">
                 <div class="am-u-sm-12 am-u-md-12 am-u-lg-9">
-                    <div class="page-header-heading"><span class="am-icon-home page-header-heading-icon"></span> 燃气监测系统
+                    <div class="page-header-heading"><span class="am-icon-home page-header-heading-icon"></span> <big>老王一家</big>的家庭监测系统
                         <small></small>
                     </div>
-                    <p class="page-header-description">燃气系统是城市基础设施的重要组成部分，对社会环境和现代化城市建设起着举足轻重的作用。</p>
-                    <p class="page-header-description">该系统在燃气监测过程中对管道压力、温度、燃气流量数据进行实时监测并可视化。</p>
-                    <p class="page-header-description">同时，支持监控日志和预警监测。</p>
+                    <p class="page-header-description">老王一家是住在四川省成都市新都区香城学府小区内的一户普通三口之家，家庭成员有爸爸、妈妈、小王。</p>
+                    <p class="page-header-description">家中若无特殊情况，基本在家做饭，且家中无地暖、无暖气等使用，夏天正常使用空调，冬天较少。</p>
+                    <p class="page-header-description">该平台为老王一家家庭数据，如水电气使用量的专属可视化展示平台。<big>旨在打造一个健康、和谐、节约、美好的家庭</big>。</p>
                 </div>
                 <div class="am-u-lg-3 tpl-index-settings-button">
                     <button type="button" class="page-header-button"><span class="am-icon-paint-brush"></span> 设置
@@ -297,14 +297,14 @@
                 <div style="width: 25%" class="am-u-sm-12 am-u-md-6 am-u-lg-4">
                     <div class="widget widget-primary am-cf">
                         <div class="widget-statistic-header">
-                            温度数据统计共
+                            本周用水量已达
                         </div>
                         <div class="widget-statistic-body">
                             <div class="widget-statistic-value">
-                                2587 条
+                                2.1 吨
                             </div>
                             <div class="widget-statistic-description">
-                                本月监测到最高温度 <strong>30</strong> 度
+                                用水量数据统计共 <strong>275</strong> 条
                             </div>
                             <span class="widget-statistic-icon am-icon-credit-card-alt"></span>
                         </div>
@@ -313,14 +313,14 @@
                 <div style="width: 25%" class="am-u-sm-12 am-u-md-6 am-u-lg-4">
                     <div class="widget widget-primary am-cf">
                         <div class="widget-statistic-header">
-                            压力数据统计共
+                            本周用电量已达
                         </div>
                         <div class="widget-statistic-body">
                             <div class="widget-statistic-value">
-                                2498 条
+                                8.2 度
                             </div>
                             <div class="widget-statistic-description">
-                                本月监测到最高压力 <strong>5.7</strong> KPa
+                                用电量数据统计共 <strong>275</strong> 条
                             </div>
                             <span class="widget-statistic-icon am-icon-credit-card-alt"></span>
                         </div>
@@ -329,14 +329,14 @@
                 <div style="width: 25%" class="am-u-sm-12 am-u-md-6 am-u-lg-4">
                     <div class="widget widget-purple am-cf">
                         <div class="widget-statistic-header">
-                            燃气数据统计共
+                            本周燃气消耗已达
                         </div>
                         <div class="widget-statistic-body">
                             <div class="widget-statistic-value">
-                                2822 条
+                                5.3 立方
                             </div>
                             <div class="widget-statistic-description">
-                                本月总共使用 <strong>27.6</strong> 立方
+                                 燃气数据统计共 <strong>275</strong> 条
                             </div>
                             <span class="widget-statistic-icon am-icon-support"></span>
                         </div>
@@ -345,14 +345,14 @@
                 <div style="width: 25%" class="am-u-sm-12 am-u-md-6 am-u-lg-4">
                     <div style="background: #00a23f;height: 174px;" class="widget widget-alarm am-cf">
                         <div class="widget-statistic-header">
-                            目前运行状态
+                            目前使用量情况
                         </div>
                         <div class="widget-statistic-body">
                             <div class="widget-statistic-value">
-                                安全
+                                较节约
                             </div>
                             <div class="widget-statistic-description">
-                                本月目前安全事故次数 0 次
+                                本月水电气超标次数 0 次
                             </div>
                             <span class="widget-statistic-icon am-icon-support"></span>
                         </div>
@@ -364,7 +364,7 @@
                 <div class="am-u-sm-12 am-u-md-12">
                     <div class="widget am-cf">
                         <div class="widget-head am-cf">
-                            <div class="widget-title am-fl">综合分析</div>
+                            <div class="widget-title am-fl">综合分析：2017 年综合展示（目前到 9 月）</div>
                             <div class="widget-function am-fr">
                                 <a href="javascript:;" class="am-icon-cog"></a>
                             </div>
@@ -396,12 +396,12 @@
                                     }
                                 },
                                 legend: {
-                                    data: ['温度', '压力', '燃气流量']
+                                    data: ['用水量', '用电量', '燃气']
                                 },
                                 xAxis: [
                                     {
                                         type: 'category',
-                                        data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月', '10月', '11月', '12月'],
+                                        data: ['1月', '2月', '3月', '4月', '5月', '6月', '7月', '8月', '9月'],
                                         axisPointer: {
                                             type: 'shadow'
                                         }
@@ -410,9 +410,9 @@
                                 yAxis: [
                                     {
                                         type: 'value',
-                                        name: '温度 & 压力',
+                                        name: '用水量 & 用电量',
                                         min: 0,
-                                        max: 40,
+                                        max: 50,
                                         interval: 5,
                                         axisLabel: {
                                             formatter: '{value}'
@@ -420,9 +420,9 @@
                                     },
                                     {
                                         type: 'value',
-                                        name: '燃气流量',
+                                        name: '燃气',
                                         min: 0,
-                                        max: 40,
+                                        max: 50,
                                         interval: 5,
                                         axisLabel: {
                                             formatter: '{value} 立方'
@@ -431,20 +431,20 @@
                                 ],
                                 series: [
                                     {
-                                        name: '温度',
+                                        name: '用水量',
                                         type: 'bar',
-                                        data: [12.0, 14.9, 15.4, 13.2, 15.6, 16.7, 17.6, 16.2, 16.6, 10.0, 16.4, 13.3]
+                                        data: [8.0, 8.9, 10.4, 9.2, 10.6, 11.7, 12.6, 13.2, 11.6]
                                     },
                                     {
-                                        name: '压力',
+                                        name: '用电量',
                                         type: 'bar',
-                                        data: [2.6, 5.9, 6.0, 6.4, 8.7, 7.7, 5.6, 6.2, 8.7, 8.8, 6.0, 2.3]
+                                        data: [45.6, 43.9, 38.0, 37.4, 38.7, 46.7, 48.6, 49.2, 42.7]
                                     },
                                     {
-                                        name: '燃气流量',
+                                        name: '燃气',
                                         type: 'line',
                                         yAxisIndex: 1,
-                                        data: [12.0, 12.2, 13.3, 14.5, 16.3, 18.2, 20.3, 23.4, 23.0, 16.5, 15.6, 16.2]
+                                        data: [29.8, 28.2, 27.8, 25.5, 24.3, 25.2, 26.7, 27.4, 29.2]
                                     }
                                 ]
                             };
@@ -526,7 +526,7 @@
                 <div class="am-u-sm-12 am-u-md-4">
                     <div class="widget am-cf">
                         <div class="widget-head am-cf">
-                            <div class="widget-title am-fl">温度压力分布</div>
+                            <div class="widget-title am-fl">用水量用电量分布</div>
                             <div class="widget-function am-fr">
                                 <a href="javascript:;" class="am-icon-cog"></a>
                             </div>
@@ -543,7 +543,7 @@
                                 },
                                 legend: {
                                     x: 'center',
-                                    data: ['温度', '压力']
+                                    data: ['用水量', '用电量']
                                 },
                                 radar: [
                                     {
@@ -563,11 +563,11 @@
                                         type: 'radar',
                                         itemStyle: {normal: {areaStyle: {type: 'default'}}},
                                         data: [{
-                                            name: '温度',
+                                            name: '用水量',
                                             value: [20.6, 25.9, 29.0, 26.4, 28.7, 70.7, 75.6, 82.2, 48.7, 38.8, 56.0, 62.3],
                                         },
                                             {
-                                                name: '压力',
+                                                name: '用电量',
                                                 value: [22.0, 24.9, 17.0, 23.2, 25.6, 76.7, 35.6, 62.2, 40.6, 40.0, 56.4, 53.3]
                                             }
                                         ]
